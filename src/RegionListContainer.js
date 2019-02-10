@@ -13,7 +13,7 @@ class RegionListContainer extends React.Component {
   }
 
   render() {
-    return <RegionList regions={this.state.regions} />;
+    return <RegionList regions={this.state.regions} {...this.props} />;
   }
 }
 
