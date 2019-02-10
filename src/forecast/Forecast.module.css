@@ -19,8 +19,11 @@
   margin-bottom: 4px;
 }
 
-.temperature {
+.image {
   padding-top: 12px;
+}
+
+.temperature {
   font-size: 1.2em;
 }
 

@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Forecast.module.css";
+const icons = require.context("./icons", true);
 
 const days = [
   "Sunday",
@@ -20,6 +21,11 @@ const Forecast = ({ forecast }) => {
         <span className={styles.day}>{dayS}</span>
         <span>{forecast.forecastDate}</span>
       </p>
+      <img
+        className={styles.image}
+        src={icons(`./${forecast.idWeatherType}.png`)}
+        alt={`${forecast.idWeatherType}`}
+      />
       <p className={styles.temperature}>
         <span className={styles.maximum}>{forecast.tMax}º </span>
         <span className={styles.minimum}>{forecast.tMin}º</span>
