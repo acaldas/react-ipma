@@ -1,0 +1,11 @@
+.Region {
+  display: block;
+  margin: 0px 0px 6px 0px;
+  font-size: 1.2em;
+  white-space: nowrap;
+}
+
+.Region:hover,
+.selected {
+  font-weight: bold;
+}

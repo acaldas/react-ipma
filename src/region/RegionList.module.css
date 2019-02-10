@@ -1,0 +1,44 @@
+.list {
+  list-style: none;
+  padding-left: 0px;
+  min-width: 230px;
+}
+
+.item {
+  list-style: none;
+  padding-left: 0px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.queryInput {
+  text-align: left;
+}
+
+.queryInput .label {
+  display: block;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.queryInput .input {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  appearance: none;
+  padding: 8px 12px;
+  width: 100%;
+  margin-top: 5px;
+  background: #ffffff;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  font-size: 1.1em;
+  outline: none;
+}
+
+@media (max-width: 920px) {
+  .list {
+    min-width: 160px;
+  }
+}

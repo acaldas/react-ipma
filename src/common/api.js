@@ -24,6 +24,7 @@ export default {
       return json;
     } catch (error) {
       console.error(error);
+      return { error };
     }
   }
 };

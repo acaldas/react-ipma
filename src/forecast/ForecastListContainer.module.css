@@ -1,0 +1,8 @@
+.ForecastListContainer {
+  opacity: 0;
+  transition: opacity 100ms ease-in-out;
+}
+
+.loaded {
+  opacity: 1;
+}

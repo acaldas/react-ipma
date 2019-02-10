@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import "./App.css";
+import styles from "./App.module.css";
 
-import RegionListContainer from "./RegionListContainer";
-import ForecastListContainer from "./ForecastListContainer";
+import RegionListContainer from "../region/RegionListContainer";
+import ForecastListContainer from "../forecast/ForecastListContainer";
 
 class App extends Component {
   state = {
@@ -13,18 +13,18 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <div className="content-left">
+      <div className={styles.App}>
+        <div className={styles.content}>
+          <div className={styles.left}>
             <RegionListContainer
               onRegionSelected={this.handleRegionSelected}
               selectedRegion={this.state.selectedRegion}
             />
           </div>
-          <div className="content-right">
+          <div className={styles.right}>
             <ForecastListContainer region={this.state.selectedRegion} />
           </div>
-        </header>
+        </div>
       </div>
     );
   }

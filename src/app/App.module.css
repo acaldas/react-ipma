@@ -1,0 +1,30 @@
+.App {
+  text-align: center;
+}
+
+.content {
+  padding: 0px 40px;
+  max-width: 1200px;
+  margin: 60px auto 0px auto;
+  min-height: 100vh;
+  display: flex;
+  font-size: 14px;
+  color: #878787;
+}
+
+.content .left {
+  align-self: flex-start;
+}
+
+.content .right {
+  flex: 1;
+  margin-left: 6%;
+}
+
+@media (max-width: 520px) {
+  .content {
+    margin-top: 30px;
+    padding: 0px 20px;
+    font-size: 12px;
+  }
+}
