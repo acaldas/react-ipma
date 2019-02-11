@@ -2,9 +2,9 @@ import React from "react";
 import styles from "./Region.module.css";
 
 const Region = ({ region, selected }) => (
-  <span className={`${styles.Region} ${selected && styles.selected}`}>
+  <p className={`${styles.Region} ${selected && styles.selected}`}>
     {region.local}
-  </span>
+  </p>
 );
 
 export default Region;

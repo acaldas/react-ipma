@@ -8,11 +8,12 @@ const ForecastListContainer = ({ region }) => {
   const [forecasts, setForecasts] = useState([]);
 
   async function getForecasts() {
-    let forecasts = await api.getForecasts(region.globalIdLocal);
+    const forecasts = await api.getForecasts(region.globalIdLocal);
     setForecasts(forecasts || []);
     setLoaded(true);
   }
 
+  // retrieves the forecasts whenever the provided region changes
   useEffect(() => {
     region && getForecasts();
     return () => {

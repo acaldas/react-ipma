@@ -5,6 +5,8 @@ import styles from "./RegionList.module.css";
 const RegionList = ({ regions, selectedRegion, onRegionClicked }) => {
   const [query, setQuery] = useState("");
 
+  // performs the filtering operation when the query
+  // or the regions list change
   const filteredRegions = useMemo(
     () =>
       regions.filter(
@@ -29,23 +31,27 @@ const RegionList = ({ regions, selectedRegion, onRegionClicked }) => {
           onChange={handleInput}
         />
       </div>
-      <ul className={styles.list}>
-        {filteredRegions.map(region => (
-          <li
-            key={region.globalIdLocal}
-            className={styles.item}
-            onClick={() => onRegionClicked(region)}
-          >
-            <Region
-              region={region}
-              selected={
-                selectedRegion &&
-                selectedRegion.globalIdLocal === region.globalIdLocal
-              }
-            />
-          </li>
-        ))}
-      </ul>
+      {filteredRegions.length ? (
+        <ul className={styles.list}>
+          {filteredRegions.map(region => (
+            <li
+              key={region.globalIdLocal}
+              className={styles.item}
+              onClick={() => onRegionClicked(region)}
+            >
+              <Region
+                region={region}
+                selected={
+                  selectedRegion &&
+                  selectedRegion.globalIdLocal === region.globalIdLocal
+                }
+              />
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p className={styles.error}>No regions found</p>
+      )}
     </div>
   );
 };
